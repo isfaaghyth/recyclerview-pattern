@@ -20,8 +20,6 @@
 						android:id="@+id/imgScan"
 						android:layout_width="match_parent"
 						android:layout_height="40dp"
-						android:clickable="true"
-						android:focusable="true"
 						android:src="@mipmap/ic_launcher"/>
 
 				<TextView
@@ -46,8 +44,6 @@
 						android:id="@+id/imgPay"
 						android:layout_width="match_parent"
 						android:layout_height="40dp"
-						android:clickable="true"
-						android:focusable="true"
 						android:src="@mipmap/ic_launcher"/>
 
 				<TextView
@@ -71,8 +67,6 @@
 						android:id="@+id/imgHistory"
 						android:layout_width="match_parent"
 						android:layout_height="40dp"
-						android:clickable="true"
-						android:focusable="true"
 						android:src="@mipmap/ic_launcher"/>
 
 				<TextView
@@ -96,8 +90,6 @@
 						android:id="@+id/imgUser"
 						android:layout_width="match_parent"
 						android:layout_height="40dp"
-						android:clickable="true"
-						android:focusable="true"
 						android:src="@mipmap/ic_launcher"/>
 
 				<TextView
