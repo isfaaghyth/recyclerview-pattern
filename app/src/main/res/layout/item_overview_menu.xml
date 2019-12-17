@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/bg_shadow"
+		android:layout_margin="8dp"
+		android:padding="16dp">
+
+		<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_weight="1"
+				android:gravity="center">
+
+				<androidx.appcompat.widget.AppCompatImageView
+						android:id="@+id/imgScan"
+						android:layout_width="match_parent"
+						android:layout_height="40dp"
+						android:clickable="true"
+						android:focusable="true"
+						android:src="@mipmap/ic_launcher"/>
+
+				<TextView
+						android:id="@+id/txtTitleScan"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						tools:text="ini titlenya"
+						android:textStyle="bold"
+						android:layout_marginTop="4dp"
+						android:textSize="12sp"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_weight="1"
+				android:gravity="center">
+
+				<androidx.appcompat.widget.AppCompatImageView
+						android:id="@+id/imgPay"
+						android:layout_width="match_parent"
+						android:layout_height="40dp"
+						android:clickable="true"
+						android:focusable="true"
+						android:src="@mipmap/ic_launcher"/>
+
+				<TextView
+						android:id="@+id/txtTitlePay"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						tools:text="ini titlenya"
+						android:layout_marginTop="4dp"
+						android:textSize="12sp"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_weight="1"
+				android:gravity="center">
+
+				<androidx.appcompat.widget.AppCompatImageView
+						android:id="@+id/imgHistory"
+						android:layout_width="match_parent"
+						android:layout_height="40dp"
+						android:clickable="true"
+						android:focusable="true"
+						android:src="@mipmap/ic_launcher"/>
+
+				<TextView
+						android:id="@+id/txtTitleHistory"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						tools:text="ini titlenya"
+						android:layout_marginTop="4dp"
+						android:textSize="12sp"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:layout_weight="1"
+				android:gravity="center">
+
+				<androidx.appcompat.widget.AppCompatImageView
+						android:id="@+id/imgUser"
+						android:layout_width="match_parent"
+						android:layout_height="40dp"
+						android:clickable="true"
+						android:focusable="true"
+						android:src="@mipmap/ic_launcher"/>
+
+				<TextView
+						android:id="@+id/txtTitleUser"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						tools:text="ini titlenya"
+						android:layout_marginTop="4dp"
+						android:textSize="12sp"/>
+
+		</LinearLayout>
+
+</LinearLayout>
