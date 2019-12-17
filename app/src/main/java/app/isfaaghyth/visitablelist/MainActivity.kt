@@ -4,9 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.isfaaghyth.visitablelist.base.BaseListAdapter
-import app.isfaaghyth.visitablelist.entity.AdBanner
-import app.isfaaghyth.visitablelist.entity.Menu
-import app.isfaaghyth.visitablelist.entity.OverviewMenu
+import app.isfaaghyth.visitablelist.entity.*
 import app.isfaaghyth.visitablelist.factory.ItemTypeFactoryImpl
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -24,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         overviewMenu()
         advertisementBanner()
+        highLightItem()
     }
 
     private fun overviewMenu() {
@@ -43,6 +42,19 @@ class MainActivity : AppCompatActivity() {
             AdBanner("Tokopedia Saja!", "Gratis Ongkir?")
         )
         adapter.addItem(adBanners)
+    }
+
+    private fun highLightItem() {
+        val highlights = listOf(
+            HighLightData(listOf(
+                HighLight("Baca Buku", "Literasi"),
+                HighLight("Ngoding", "Produk"),
+                HighLight("Ngoding", "Produk"),
+                HighLight("Ngoding", "Produk"),
+                HighLight("Ngoding", "Produk")
+            ))
+        )
+        adapter.addItem(highlights)
     }
 
 }
