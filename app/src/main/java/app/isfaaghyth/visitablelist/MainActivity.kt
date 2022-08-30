@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
 
         adapter.addItem(shortcutMenu())
         adapter.addItem(productHighlight())
-        adapter.addItem(advertisement())
     }
 
     private fun shortcutMenu() = listOf(
@@ -43,10 +42,6 @@ class MainActivity : AppCompatActivity() {
             Menu(R.mipmap.ic_overview_history, "History"),
             Menu(R.mipmap.ic_overview_user, "Account")
         )
-    )
-
-    private fun advertisement() = listOf(
-        Advertisement("the one and only, Isfa!", "who the most handsome guy?")
     )
 
     private fun productHighlight() = listOf(
