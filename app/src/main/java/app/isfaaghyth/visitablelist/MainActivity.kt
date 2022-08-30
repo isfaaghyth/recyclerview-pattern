@@ -3,10 +3,12 @@ package app.isfaaghyth.visitablelist
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import app.isfaaghyth.visitablelist.internal.visitable.BaseListAdapter
-import app.isfaaghyth.visitablelist.entity.*
-import app.isfaaghyth.visitablelist.impl.adapterdelegate.FeatureAdapter
-import app.isfaaghyth.visitablelist.impl.visitable.factory.ItemTypeFactoryImpl
+import app.isfaaghyth.visitablelist.entity.HighLight
+import app.isfaaghyth.visitablelist.entity.Menu
+import app.isfaaghyth.visitablelist.entity.ProductHighLight
+import app.isfaaghyth.visitablelist.entity.ShortcutMenu
+import app.isfaaghyth.visitablelist.impl.adapterdelegate.FeatureDelegateAdapter
+import app.isfaaghyth.visitablelist.impl.visitable.FeatureVisitableAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,19 +18,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         lstItems.layoutManager = LinearLayoutManager(this)
 
-        setupVisitableItems()
-//        setupAdapterDelegateItems()
+        setupVisitableItems() // visitor pattern
+//        setupAdapterDelegateItems() // adapter delegate
     }
 
     private fun setupAdapterDelegateItems() {
-        val adapter = FeatureAdapter()
+        val adapter = FeatureDelegateAdapter()
         lstItems.adapter = adapter
 
         adapter.addItems(shortcutMenu())
     }
 
     private fun setupVisitableItems() {
-        val adapter = BaseListAdapter(ItemTypeFactoryImpl())
+        val adapter = FeatureVisitableAdapter()
         lstItems.adapter = adapter
 
         adapter.addItem(shortcutMenu())

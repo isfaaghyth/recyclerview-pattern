@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 
-class BaseListAdapter(
+open class BaseListAdapter(
     private val adapterTypeFactory: AdapterTypeFactory,
     private val items: ArrayList<Visitable<Any>> = arrayListOf()
 ): RecyclerView.Adapter<AbstractViewHolder<Visitable<Any>>>() {
