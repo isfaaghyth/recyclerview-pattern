@@ -1,23 +1,24 @@
-package app.isfaaghyth.visitablelist.viewholder
+package app.isfaaghyth.visitablelist.impl.visitable.viewholder
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import app.isfaaghyth.visitablelist.R
-import app.isfaaghyth.visitablelist.base.AbstractViewHolder
+import app.isfaaghyth.visitablelist.internal.visitable.AbstractViewHolder
 import app.isfaaghyth.visitablelist.entity.HighLight
-import app.isfaaghyth.visitablelist.entity.HighLightData
+import app.isfaaghyth.visitablelist.entity.ProductHighLight
 import kotlinx.android.synthetic.main.item_highlight.view.*
 import kotlinx.android.synthetic.main.item_overview_highlights.view.*
 
-class HighLightDataViewHolder(view: View): AbstractViewHolder<HighLightData>(view) {
+class ProductHighLightViewHolder(view: View): AbstractViewHolder<ProductHighLight>(view) {
 
     private lateinit var adapter: HighLightAdapter
     private var lstHighlight = view.lstHighLight
 
-    override fun bind(element: HighLightData) {
+    override fun bind(element: ProductHighLight) {
         adapter = HighLightAdapter(element.items)
         lstHighlight.layoutManager = LinearLayoutManager(
             itemView.context,
@@ -63,7 +64,7 @@ class HighLightDataViewHolder(view: View): AbstractViewHolder<HighLightData>(vie
     }
 
     companion object {
-        val LAYOUT = R.layout.item_overview_highlights
+        @LayoutRes val LAYOUT = R.layout.item_overview_highlights
     }
 
 }

@@ -1,13 +1,14 @@
-package app.isfaaghyth.visitablelist.viewholder
+package app.isfaaghyth.visitablelist.impl.visitable.viewholder
 
 import android.view.View
+import androidx.annotation.LayoutRes
 import app.isfaaghyth.visitablelist.R
-import app.isfaaghyth.visitablelist.base.AbstractViewHolder
+import app.isfaaghyth.visitablelist.internal.visitable.AbstractViewHolder
 import app.isfaaghyth.visitablelist.entity.Menu
-import app.isfaaghyth.visitablelist.entity.OverviewMenu
+import app.isfaaghyth.visitablelist.entity.ShortcutMenu
 import kotlinx.android.synthetic.main.item_overview_menu.view.*
 
-class OverviewMenuViewHolder(view: View): AbstractViewHolder<OverviewMenu>(view) {
+class ShortcutMenuViewHolder(view: View): AbstractViewHolder<ShortcutMenu>(view) {
 
     private val imgScan = view.imgScan
     private val txtTitleScan = view.txtTitleScan
@@ -21,7 +22,7 @@ class OverviewMenuViewHolder(view: View): AbstractViewHolder<OverviewMenu>(view)
     private val imgUser = view.imgUser
     private val txtTitleUser = view.txtTitleUser
 
-    override fun bind(element: OverviewMenu) {
+    override fun bind(element: ShortcutMenu) {
         setBtnScan(element.scan)
         setBtnPay(element.pay)
         setBtnHistory(element.history)
@@ -49,7 +50,7 @@ class OverviewMenuViewHolder(view: View): AbstractViewHolder<OverviewMenu>(view)
     }
 
     companion object {
-        val LAYOUT = R.layout.item_overview_menu
+        @LayoutRes val LAYOUT = R.layout.item_overview_menu
     }
 
 }
