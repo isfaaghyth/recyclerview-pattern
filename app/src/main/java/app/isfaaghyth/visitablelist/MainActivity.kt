@@ -3,10 +3,7 @@ package app.isfaaghyth.visitablelist
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import app.isfaaghyth.visitablelist.entity.HighLight
-import app.isfaaghyth.visitablelist.entity.Menu
-import app.isfaaghyth.visitablelist.entity.ProductHighLight
-import app.isfaaghyth.visitablelist.entity.ShortcutMenu
+import app.isfaaghyth.visitablelist.entity.*
 import app.isfaaghyth.visitablelist.impl.adapterdelegate.FeatureDelegateAdapter
 import app.isfaaghyth.visitablelist.impl.visitable.FeatureVisitableAdapter
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         lstItems.layoutManager = LinearLayoutManager(this)
 
-        setupVisitableItems() // visitor pattern
-//        setupAdapterDelegateItems() // adapter delegate
+//        setupVisitableItems() // visitor pattern
+        setupAdapterDelegateItems() // adapter delegate
     }
 
     private fun setupAdapterDelegateItems() {
@@ -27,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         lstItems.adapter = adapter
 
         adapter.addItems(shortcutMenu())
+        adapter.addItems(ads())
     }
 
     private fun setupVisitableItems() {
@@ -35,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         adapter.addItem(shortcutMenu())
         adapter.addItem(productHighlight())
+        adapter.addItem(ads())
     }
 
     private fun shortcutMenu() = listOf(
@@ -52,6 +51,10 @@ class MainActivity : AppCompatActivity() {
             HighLight("Galaxy S22", "#electronic"),
             HighLight("Lenovo X1 Carbon", "#electronic")
         ))
+    )
+
+    private fun ads() = listOf(
+        Advertisement("Tokopedia", "Marketplace app name")
     )
 
 }
